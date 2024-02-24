@@ -12,7 +12,7 @@ package spidev
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
 
-#define SPI_SPEED 4000000
+#define SPI_SPEED 1000000
 
 uint8_t mode=0;
 uint8_t bits=8;
@@ -84,9 +84,10 @@ int spi_xfer(int fd, char* tx, char* rx, int length) {
 }
 */
 import "C"
-import "unsafe"
-
-import "errors"
+import (
+	"errors"
+	"unsafe"
+)
 
 // SPIDevice device
 type SPIDevice struct {

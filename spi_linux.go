@@ -12,7 +12,8 @@ package spidev
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
 
-#define SPI_SPEED 1000000
+//#define SPI_SPEED 4000000
+#define SPI_SPEED 10000000
 
 uint8_t mode=0;
 uint8_t bits=8;
